@@ -329,7 +329,7 @@ $(document).ready(function () {
     if (role === "admin") {
       window.location.href = "dash.html";
     } else if (role === "customer") {
-      window.location = "HomePage.html";
+      window.location = "index.html";
     } else if (role === "seller") {
       window.location.href = "SellerDashboard.html";
     } else {

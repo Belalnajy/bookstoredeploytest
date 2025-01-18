@@ -85,7 +85,7 @@ $(function () {
       shopNowButton.text("Shop Now");
       shopNowButton.addClass("btn btn-primary mt-3 fs-5");
       shopNowButton.on("click", function () {
-        window.location.href = "./HomePage.html";
+        window.location.href = "./index.html";
       });
       shopNowButton.appendTo(emptyCartWrapper);
       emptyCartWrapper.removeClass("d-none");
