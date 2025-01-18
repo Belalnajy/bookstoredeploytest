@@ -1,0 +1,149 @@
+/* breadcrumb */
+#breadcrumb,
+#filter-search {
+  background-color: #f6f7f8;
+}
+#breadcrumb nav ol li:hover {
+  cursor: pointer;
+  color: #be9900;
+}
+/* end of breadcrumb */
+
+/* banner */
+#banner > div > img {
+  width: 25% !important;
+  height: 30% !important;
+}
+/* end of banner */
+/* books counter */
+.counter:hover {
+  cursor: pointer;
+}
+/* end of books counter */
+/* slider-range */
+#slider-range {
+  height: 7px !important;
+  background-color: #ddd;
+  position: relative;
+  margin-top: 20px;
+  border-radius: 2px;
+}
+
+#slider-range .ui-slider-handle {
+  background-color: #810b0b;
+  border-radius: 50%; /* Make it circular */
+  width: 20px; /* Set width */
+  height: 20px; /* Set height */
+  border: 2px solid #ffffff; /* Border color */
+  position: absolute; /* Absolute to position within the slider */
+  top: 3px; /* Adjust to center the handle within the slider */
+  transform: translate(-50%, -50%);
+}
+
+#slider-range:hover {
+  cursor: pointer;
+}
+/* end of slider */
+
+/* filter-search */
+/* #filter-search div div {
+  width: fit-content;
+} */
+#totalNumberOfItems:hover,
+#sortContainer > label:hover {
+  cursor: pointer;
+  color: #be9900;
+}
+#sortContainer > select:hover {
+  cursor: pointer;
+}
+/* end of filter-search */
+
+/* main card */
+.main-product .card .card-body .btn:hover {
+  background-color: #4d4c47;
+  color: white;
+  border: 2px solid #4d4c47;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.15);
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.card-body > .card-title,
+.card-body > .card-text,
+#banner-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* font-size: 20px; */
+}
+.main-product .card {
+  /* shadow */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  /* width: 21rem; */
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.main-product .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+}
+.img-container {
+  position: relative;
+  /* display: flex; */
+}
+.img-container img {
+  height: 450px !important;
+  /* flex-grow: 1; */
+  transition: transform 0.3s ease;
+}
+.img-container:hover img {
+  transform: scale(1);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.692);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.img-container:hover .overlay {
+  opacity: 1;
+}
+.btn-outline-secondary {
+  transition: transform 0.3s ease;
+  margin: 0 5px;
+  font-size: 1.2rem;
+}
+.img-container:hover .btn-outline-secondary {
+  transform: scale(1.1);
+}
+/* end of main card */
+/* Pagination */
+#paginationWrapper {
+  background-color: #f6f7f8 !important;
+}
+.pagination-lg {
+  --bs-pagination-border-radius: 0px !important;
+}
+.pagination {
+  background-color: #f6f7f8;
+}
+.page-item > .page-link {
+  background-color: #f6f7f8;
+  color: black;
+  border: none;
+}
+
+/* end of pagination */

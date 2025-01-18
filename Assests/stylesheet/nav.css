@@ -1,0 +1,136 @@
+.bg-primary {
+  background-color: #e4cfb6 !important;
+}
+.bg-secondary {
+  background-color: #810b0b !important;
+}
+.text-primary {
+  color: #be9900 !important;
+}
+.text-secondary {
+  color: #223263 !important;
+}
+.text-secondary-emphasis {
+  color: #810b0b !important;
+}
+.btn-primary {
+  background-color: #810b0b;
+  color: #fff;
+}
+.btn-secondary {
+  background-color: #be9900;
+  color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.btn {
+  border: none;
+}
+
+.nav-item {
+  text-transform: uppercase;
+}
+/* Search bar */
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+.icons {
+  background-color: rgba(255, 255, 255, 0.448); /* border: 1px black solid; */
+  padding: 5px;
+  border-radius: 30px;
+  width: 35px;
+  height: 35px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icons:hover {
+  background-color: #f7f7f7;
+  color: white;
+}
+/* Hide dropdown arrow */
+.dropdown-toggle::after {
+  display: none;
+}
+
+/* in active */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:active {
+  background-color: #810b0b;
+  color: white;
+  /* Optionally change the text color */
+}
+
+#mainNavigation .navbar-nav .active {
+  color: #be9900;
+}
+.nav-item a:hover {
+  color: #be9900;
+}
+#mainNavigation .navbar-nav .nav-item {
+  padding-bottom: 1px;
+  width: 30%;
+}
+#mainNavigation .header > i {
+  padding-bottom: 15px;
+}
+#mainNavigation .main-barnd {
+  font-family: "Niconne";
+  font-size: 48px;
+  text-transform: none;
+}
+
+.navbar-nav .nav-link {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #be9900;
+  /* text-decoration: underline; */
+}
+
+.navbar-nav .nav-link.active {
+  color: yellow;
+  /* text-decoration: underline; */
+  text-underline-offset: 4px;
+}
+
+.nav-link.active {
+  color: white;
+  /* text-decoration: underline; */
+  text-underline-offset: 4px;
+}
+
+
+
+.shake-animation {
+  animation: shake 0.5s ease-in-out infinite;
+}
+
+.modal-dialog-scrollable .modal-body {
+  max-height: 400px; /* Adjust this value as needed */
+  overflow-y: auto;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Niconne" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./Assests/stylesheet/bootstrap.min.css" />
+    <link rel="stylesheet" href="./Assests/stylesheet/Contact Us.css" />
+  </head>
+
+  <body>
+    <!-- Start Navbar -->
+    <div id="mainNavigation"></div>
+    <!-- end Navbar -->
+
+    <!-- body -->
+    <div class="container my-5">
+      <div class="contactus">
+        <!-- contact title -->
+        <h1>Contact Us</h1>
+      </div>
+
+      <div class="row">
+        <!-- location and contact -->
+        <div class="col-md-12 mb-4">
+          <!-- location frame -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.5767594415614!2d30.998460915012104!3d30.80190347942016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7c99d5ba18c4f%3A0x7ffb41d24ac7b9a0!2sEdraaK%20BooKStore!5e0!3m2!1sen!2seg!4v1680584451703!5m2!1sen!2seg"
+            width="100%"
+            height="300"
+            allowfullscreen=""
+          >
+          </iframe>
+        </div>
+        <!-- end location frame -->
+
+        <div class="col-md-6" id="contact">
+          <!-- contact -->
+          <h5><strong>Contact Details</strong></h5>
+          <p><i class="fas fa-location me-2 text-light bg-secondary p-2"></i><strong>Location: </strong>New York, NY 10012, US</p>
+          <p><i class="fas fa-envelope me-2 text-light bg-secondary p-2"></i><strong>Email: </strong>info@example.com</p>
+          <p><i class="fas fa-phone me-2 text-light bg-secondary p-2"></i><strong>Call: </strong>+01 234 567 88</p>
+        </div>
+        <!--end contact -->
+      </div>
+      <!-- end location and contact -->
+
+      <!-- form -->
+      <div class="mt-4">
+        <form id="formcontact">
+          <div class="row">
+            <!-- name and email -->
+            <div class="col-md-6 mb-3">
+              <!-- name -->
+              <input type="text" id="name" class="form-control" placeholder="Your Name" />
+              <small class="text-secondary d-none" id="errorname">*Name must contain only and at least three letters.*</small>
+            </div>
+            <!-- end name-->
+
+            <div class="col-md-6 mb-3">
+              <!-- email -->
+              <input type="email" id="email" class="form-control" placeholder="Your Email" />
+              <small class="text-secondary d-none" id="erroremail">*Please enter a valid email address.*</small>
+            </div>
+            <!-- end email -->
+          </div>
+          <!-- end name and email -->
+
+          <div class="mb-3">
+            <!-- subject -->
+            <input type="text" id="subject" class="form-control" placeholder="Subject" required />
+          </div>
+          <!-- end subject -->
+
+          <div class="mb-3">
+            <!-- textarea -->
+            <textarea class="form-control" id="message" rows="5" placeholder="Write Your Message Here..." required></textarea>
+          </div>
+          <!-- end textarea -->
+          <div class="text-center">
+            <button type="submit" id="sendbutton" class="btn btn-primary btn-sub w-25">Send</button>
+          </div>
+        </form>
+      </div>
+      <!-- end form -->
+
+      <!-- message toast -->
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-delay="8000" id="successtoast">
+          <div class="toast-header bg-success">
+            <strong class="me-auto text-light">Form Submission</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">Your data has been submitted successfully!</div>
+        </div>
+      </div>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-delay="8000" id="failedtoast">
+          <div class="toast-header bg-danger">
+            <strong class="me-auto text-light">Form Submission Failed</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">You need to log in or sign up first!</div>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+
+    <!-- body -->
+
+    <!-- Footer -->
+    <footer id="footer" class="text-center text-lg-start text-white" style="background-color: #e4cfb6"></footer>
+    <!-- Footer -->
+    <script src="./Assests/javascribt/jquery-3.7.1.slim.js"></script>
+    <script src="./Assests/javascribt/sweetalert2.all.min.js"></script>
+    <!-- Sweet Aleart Toast -->
+    <script src="./Assests/javascribt/toastSweetalert.js"></script>
+    <script src="./Assests/javascribt/Contact Us.js"></script>
+    <script src="Assests/javascribt/nav.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function loadContent(url, elementId) {
+          fetch(url)
+            .then((response) => response.text())
+            .then((data) => {
+              document.getElementById(elementId).innerHTML = data;
+              // Ensure the badge is updated after the navigation is loaded
+              if (elementId === "mainNavigation") {
+                // Call the updateCartBadge function defined in nav.js
+                updateCartBadge();
+                updateFavoritesBadge();
+                setActiveLink();
+              }
+            })
+            .catch((error) => console.error("Error loading content:", error));
+        }
+
+        // Load navigation and footer
+        loadContent("nav.html", "mainNavigation");
+        loadContent("footer.html", "footer");
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Acme|Alegreya|Alegreya+Sans|Anton|Archivo|Archivo+Black|Archivo+Narrow|Arimo|Arvo|Asap|Asap+Condensed|Bitter|Bowlby+One+SC|Bree+Serif|Cabin|Cairo|Catamaran|Crete+Round|Crimson+Text|Cuprum|Dancing+Script|Dosis|Droid+Sans|Droid+Serif|EB+Garamond|Exo|Exo+2|Faustina|Fira+Sans|Fjalla+One|Francois+One|Gloria+Hallelujah|Hind|Inconsolata|Indie+Flower|Josefin+Sans|Julee|Karla|Lato|Libre+Baskerville|Libre+Franklin|Lobster|Lora|Mada|Manuale|Maven+Pro|Merriweather|Merriweather+Sans|Montserrat|Montserrat+Subrayada|Mukta+Vaani|Muli|Noto+Sans|Noto+Serif|Nunito|Open+Sans|Open+Sans+Condensed:300|Oswald|Oxygen|PT+Sans|PT+Sans+Caption|PT+Sans+Narrow|PT+Serif|Pacifico|Passion+One|Pathway+Gothic+One|Play|Playfair+Display|Poppins|Questrial|Quicksand|Raleway|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Ropa+Sans|Rubik|Saira|Saira+Condensed|Saira+Extra+Condensed|Saira+Semi+Condensed|Sedgwick+Ave|Sedgwick+Ave+Display|Shadows+Into+Light|Signika|Slabo+27px|Source+Code+Pro|Source+Sans+Pro|Spectral|Titillium+Web|Ubuntu|Ubuntu+Condensed|Varela+Round|Vollkorn|Work+Sans|Yanone+Kaffeesatz|Zilla+Slab|Zilla+Slab+Highlight"
+      rel="stylesheet"
+    />
+
+    <!-- end  fonts-->
+    <!-- bootstrap sheets -->
+
+    <link rel="stylesheet" href="./Assests/stylesheet/bootstrap.min.css" />
+    <link rel="stylesheet" href="Assests/stylesheet/nav.css" />
+    <link rel="stylesheet" href="./Assests/stylesheet/toastSweeralert.css" />
+
+    <!-- end bootstrap -->
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- end icons -->
+  </head>
+
+  <body>
+    <!-- Start Navbar -->
+    <nav role="navigation">
+      <div class="border-bottom d-flex align-items-center bg-primary justify-content-evenly">
+        <a href="./HomePage.html" class="navbar-brand main-barnd"><img style="width: 120px; height: 60px" src="./Assests/images/logo.png" alt="Logo" /></a>
+        <div class="p-1 mx-3 bg-light rounded rounded-pill shadow-sm w-75 d-none d-lg-block d-md-block">
+          <div id="search-container" class="input-group">
+            <input id="global-search" type="search" placeholder="Search for a book" class="form-control border-0 bg-light" />
+            <div class="input-group-append">
+              <button id="button-addon1" type="submit" class="btn btn-link text-primary">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex">
+          <!-- User Dropdown -->
+          <div class="dropdown pe-2">
+            <a href="#" class="nav-link icons text-secondary-emphasis me-1 dropdown-toggle" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user fa-lg"></i>
+            </a>
+            <ul class="dropdown-menu" id="userDropdownMenu" aria-labelledby="userDropdown">
+              <li id="dashboard-link">
+                <a class="dropdown-item d-none" href="./dashboard.html">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Heart Dropdown -->
+          <div class="dropdown">
+            <a href="#" class="nav-link icons text-secondary-emphasis me-1 dropdown-toggle" id="heartDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-heart fa-lg"></i>
+              <span class="badge bg-danger position-absolute top-0 start-75 translate-middle p-2 rounded-circle" id="heartBadge">0</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="heartDropdown">
+              <li>
+                <a class="dropdown-item" href="./wishlist.html">Favorites</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Shopping Cart Dropdown -->
+          <div class="container">
+            <div class="dropdown">
+              <a href="#" class="nav-link icons text-secondary-emphasis me-1 dropdown-toggle position-relative" id="cartDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-shopping-cart fa-lg"></i>
+                <span id="cartBadge" class="badge bg-danger position-absolute top-0 start-75 translate-middle p-2 rounded-circle">0</span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="cartDropdown">
+                <li>
+                  <a class="dropdown-item cartbtn" href="cart.html">Cart</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Bell Dropdown -->
+          <div class="dropdown" id="bell">
+            <a href="#" class="nav-link icons text-secondary-emphasis me-1 dropdown-toggle" id="bellDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-bell fa-lg" id="bellicon"></i>
+              <span id="inboxBadge" class="badge bg-danger position-absolute top-0 start-75 translate-middle p-2 rounded-circle">0</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="bellDropdown">
+              <li>
+                <a class="dropdown-item" href="#" onclick="showInboxPopup()">Notifications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Popup Modal -->
+    <div class="modal fade" id="inboxPopup" tabindex="-1" aria-labelledby="inboxPopupLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="inboxPopupLabel">Inbox Notifications</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Messages will be appended here -->
+            <div id="inboxMessagesContainer" class="d-flex flex-column"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EndHeader -->
+    <div class="navbar-expand-md">
+      <div class="navbar-dark text-center bg-primary">
+        <button
+          class="navbar-toggler w-75 text-black"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <div class="text-center mt-3 collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav d-flex justify-content-center mx-auto col-2 col-md-5 col-lg-5 col-sm-0" id="navbarLinks">
+          <li class="nav-item">
+            <a class="nav-link" href="./HomePage.html" id="home-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./About Us.html" id="about-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Contact Us.html" id="contact-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- End Navbar -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./Assests/javascribt/jquery-3.7.1.slim.js"></script>
+    <script src="./Assests/javascribt/nav.js"></script>
+    <script src="./Assests/javascribt/sweetalert2.all.min.js"></script>
+    <script src="./Assests/javascribt/toastSweetalert.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

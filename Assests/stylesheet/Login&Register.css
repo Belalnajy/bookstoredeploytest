@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* 
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --linear-grad: linear-gradient(to right, #810b0b, #810b0b);
+  --grad-clr1: #810b0b;
+  --grad-clr2: #ffffff;
+}
+/* @media all and (max-width: 768px) {
+  .css-container {
+    width: 90% !important;
+    margin: auto !important;
+  }
+} */
+
+* {
+  user-select: none;
+}
+
+:root {
+  --linear-grad: linear-gradient(to right, #810b0b, #810b0b);
+  --grad-clr1: #810b0b;
+  --grad-clr2: #ffffff;
+}
+body {
+  background: #f6f5f7;
+  font-family: "Poppins", sans-serif !important;
+  height: 100vh;
+}
+
+.forms {
+  height: 70vh;
+  margin: 10vh 0;
+  box-shadow: 25px 30px 55px #5557;
+  border-radius: 13px;
+  /* overflow: hidden; */
+}
+
+.form-container {
+  transition: all 0.6s ease-in-out;
+}
+
+.main-color {
+  color: var(--grad-clr1);
+}
+
+input {
+  background-color: #f3f3f3;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-bottom: #810b0b 3px solid;
+}
+
+a,
+a:hover {
+  color: #333 !important;
+  font-size: 14px !important;
+  margin: 15px 0px;
+}
+
+button {
+  border: 1px solid var(--grad-clr1);
+  border-radius: 42px !important;
+  background: #810b0b;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 8px 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* from here */
+.w-70 {
+  width: 70% !important;
+}
+
+.btn-border {
+  border: 1px solid #ffff !important;
+}
+
+.main-color-bg {
+  background-color: var(--grad-clr1) !important;
+}
+
+.radius-5 {
+  border-radius: 5px !important;
+}
+.top-35 {
+  top: 35% !important;
+}
+.left-20 {
+  left: 20px !important;
+}
+
+.grey {
+  color: #aaa;
+}
+
+.px-40 {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+@media all and (max-width: 768px) {
+  .forms {
+    height: 90vh;
+    margin: 5vh 0;
+    box-shadow: 25px 30px 55px #5557;
+    border-radius: 13px;
+    /* overflow: hidden; */
+  }
+
+  #loginForm,
+  #signUpForm {
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+  }
+
+  .loginText,
+  .formInputs,
+  .signUpText {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+}
+
+.loginText {
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+
+.signUpText {
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+}

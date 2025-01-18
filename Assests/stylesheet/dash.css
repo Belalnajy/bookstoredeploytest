@@ -1,0 +1,88 @@
+body {
+  font-family: sans-serif;
+}
+
+.dashCont .title {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.dashCont .title p {
+  margin-top: 15px;
+}
+
+.dashCont .title span {
+  margin-bottom: 50px;
+}
+
+.dashCont .count p {
+  margin: 0;
+}
+
+.dashCont .box {
+  height: 150px;
+  flex-basis: 150px;
+  flex-grow: 1;
+  border-radius: 10px;
+}
+
+.dashCont .box i {
+  font-size: 40px;
+}
+
+.dashCont .box span {
+  font-size: 30px;
+}
+
+.dashCont table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 8px;
+  overflow-x: auto;
+}
+
+.dashCont .usersTable {
+  vertical-align: middle !important;
+}
+
+th {
+  border-radius: 8px;
+}
+
+td,
+tr {
+  height: 50px;
+  border-radius: 8px;
+}
+
+.dashCont .price {
+  background-color: #008000;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#removeLink {
+  visibility: hidden;
+}
+
+.content {
+  width: 100%;
+}
+
+.dashCont .itemCtn img {
+  width: 150px;
+  height: 150px;
+}
+
+#updateProductBtn {
+  display: none;
+}
+
+.AddProductDiv {
+  display: none;
+}
+
+.addNewProductBtn {
+  cursor: pointer;
+}

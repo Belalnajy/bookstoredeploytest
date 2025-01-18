@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MainPage</title>
+
+    <!-- Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Acme|Alegreya|Alegreya+Sans|Anton|Archivo|Archivo+Black|Archivo+Narrow|Arimo|Arvo|Asap|Asap+Condensed|Bitter|Bowlby+One+SC|Bree+Serif|Cabin|Cairo|Catamaran|Crete+Round|Crimson+Text|Cuprum|Dancing+Script|Dosis|Droid+Sans|Droid+Serif|EB+Garamond|Exo|Exo+2|Faustina|Fira+Sans|Fjalla+One|Francois+One|Gloria+Hallelujah|Hind|Inconsolata|Indie+Flower|Josefin+Sans|Julee|Karla|Lato|Libre+Baskerville|Libre+Franklin|Lobster|Lora|Mada|Manuale|Maven+Pro|Merriweather|Merriweather+Sans|Montserrat|Montserrat+Subrayada|Mukta+Vaani|Muli|Noto+Sans|Noto+Serif|Nunito|Open+Sans|Open+Sans+Condensed:300|Oswald|Oxygen|PT+Sans|PT+Sans+Caption|PT+Sans+Narrow|PT+Serif|Pacifico|Passion+One|Pathway+Gothic+One|Play|Playfair+Display|Poppins|Questrial|Quicksand|Raleway|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Ropa+Sans|Rubik|Saira|Saira+Condensed|Saira+Extra+Condensed|Saira+Semi+Condensed|Sedgwick+Ave|Sedgwick+Ave+Display|Shadows+Into+Light|Signika|Slabo+27px|Source+Code+Pro|Source+Sans+Pro|Spectral|Titillium+Web|Ubuntu|Ubuntu+Condensed|Varela+Round|Vollkorn|Work+Sans|Yanone+Kaffeesatz|Zilla+Slab|Zilla+Slab+Highlight"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./Assests/stylesheet/bootstrap.min.css" />
+    <link rel="stylesheet" href="./Assests/stylesheet/homepage.css" />
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="./Assests/stylesheet/toastSweeralert.css" />
+  </head>
+
+  <body>
+    <!-- Navigation bar -->
+    <div id="mainNavigation"></div>
+
+    <!-- SlideShow -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./Assests/images/1.jpg" class="d-block w-100" alt="Slide 1" />
+        </div>
+        <div class="carousel-item">
+          <img src="./Assests/images/2.png" class="d-block w-100" alt="Slide 2" />
+        </div>
+        <div class="carousel-item">
+          <img src="./Assests/images/3.jpg" class="d-block w-100" alt="Slide 3" />
+        </div>
+      </div>
+      <!-- Carousel controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- End of slideshow -->
+
+    <!-- Display random products-->
+    <div class="ran-products container d-flex justify-content-center align-content-center text-center">
+      <div class="row"></div>
+    </div>
+    <!--  end random products -->
+
+    <!-- Tabs for filtering products by category -->
+    <h4 style="text-transform: uppercase; text-align: center; font-weight: bold">Best Seller</h4>
+    <ul class="nav justify-content-center" id="tabs">
+      <li class="nav-item">
+        <a class="nav-link active text-primary" aria-current="page" href="#" data-category="All">All</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-category="fantasy">Fantasy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-category="horror">Horror</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-category="drama">Drama</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-category="comedy">Comedy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-category="kids">Kids</a>
+      </li>
+    </ul>
+    <!-- end tabs -->
+    <!-- Main products -->
+    <div class="row main-product w-100">
+      <div id="books-Container" class="row p-0 m-0"></div>
+    </div>
+    <!--  end main products  -->
+
+    <!-- Link to load more products -->
+    <h5 class="text-center mt-4"><a class="text-primary" href="./LoadMore.html">LOAD MORE</a></h5>
+
+    <!-- Promotional banner -->
+    <div id="banner" class="bg-primary mt-5 mb-5">
+      <div class="d-flex justify-content-between">
+        <p class="lead align-content-center ps-2">
+          <span id="banner-title" style="font-weight: 900">Book of the Month: Songlight</span><br /><br /><br />
+          <span id="banner-description" class="py-3"
+            >Set in a post-apocalyptic future, Songlight is an extraordinary debut from a renowned screenwriter. A cinematic masterpiece in storytelling, the explosive first book in the Torch trilogy
+            is the hottest release of the decade! </span
+          ><br /><br /><br />
+          <button id="banner-btn" class="btn btn-shop btn-primary">Shop now</button>
+        </p>
+        <!-- <hr class="my-4" /> -->
+        <img class="w-25" src="" alt="Book of the Month" />
+      </div>
+    </div>
+    <!-- end banner -->
+
+    <!-- footer -->
+    <!-- Footer section -->
+    <footer id="footer" class="text-center text-lg-start text-white" style="background-color: #e4cfb6"></footer>
+    <!-- end footer -->
+    <!-- jQuery for DOM manipulation and event handling -->
+    <script src="./Assests/javascribt/jquery-3.7.1.slim.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- SweetAlert2 for alerts and toasts -->
+    <script src="./Assests/javascribt/sweetalert2.all.min.js"></script>
+    <script src="./Assests/javascribt/toastSweetalert.js"></script>
+
+    <!-- Navigation script -->
+    <script src="Assests/javascribt/nav.js"></script>
+
+    <!-- Homepage script -->
+    <script type="module" src="./Assests/javascribt/Homepage.js"></script>
+    <!-- <script src="./Assests/javascribt/wishlist.js"></script> -->
+    <!-- Bootstrap JS and Popper.js for Bootstrap components -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

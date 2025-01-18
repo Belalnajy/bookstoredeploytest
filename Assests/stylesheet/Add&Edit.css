@@ -1,0 +1,127 @@
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  position: relative;
+}
+
+.form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 35px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #000;
+}
+
+.btn-primary {
+  background-color: #810b0b;
+  border: none;
+  height: calc(2.375rem + 2px);
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #ac0c0c;
+}
+
+hr {
+  border: 1px solid #dee2e6;
+  margin: 5px 0;
+  width: 40%;
+  background-color: #810b0b;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #343a40;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #810b0b;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #810b0b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.home-button:hover {
+  background-color: #ac0c0c;
+}
+
+.home-button i {
+  margin-right: 8px;
+}
+
+.input-group {
+  width: 100%;
+}
+
+.dropdown {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.dropdown-toggle {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  background-color: #ac0c0c;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown-toggle:hover {
+  transform: scale(1.05);
+}
+
+.dropdown-toggle:focus {
+  outline: none;
+}
+
+.dropdown-menu {
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #e4cfb6;
+  color: white;
+}

@@ -1,0 +1,33 @@
+/* slider */
+
+.aboutus {
+  text-align: center;
+  margin: 20px 0;
+}
+.aboutus h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px #e4cfb6 inset;
+}
+
+/* start body */
+.team-slider img {
+  border-radius: 50%;
+  margin: auto;
+}
+.team-slider h5 {
+  margin-top: 15px;
+  font-weight: bold;
+}
+.team-slider p {
+  margin-bottom: 5px;
+}
+.icons-section .icon-box {
+  text-align: center;
+  margin: 20px 0;
+}
+.icons-section .icon-box i {
+  font-size: 40px;
+  color: #d9534f;
+  margin-bottom: 10px;
+}

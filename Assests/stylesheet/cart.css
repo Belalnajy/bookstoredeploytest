@@ -1,0 +1,77 @@
+/* breadcrumb */
+#breadcrumb,
+#filter-search {
+  background-color: #f6f7f8;
+}
+#breadcrumb nav ol li:hover {
+  cursor: pointer;
+  color: #be9900;
+}
+/* end of breadcrumb */
+
+/* Cart */
+
+.fa-xmark {
+  color: #ff4252;
+  /* border-radius: 50%;  */
+}
+.card {
+  max-width: 20rem;
+  /* margin-left: 1rem; */
+}
+.productimg {
+  /* height: 150px; */
+  box-shadow: 2px 5px 3px gray;
+}
+
+div.counter {
+  width: 3rem;
+}
+
+.input-group {
+  background-color: #dfdede;
+}
+input[type="checkbox"]:hover,
+.card:hover,
+.input-group:hover {
+  cursor: pointer;
+}
+.input-group > *:hover {
+  background-color: #7d7b7b;
+}
+div.counter:hover {
+  cursor: text;
+  background-color: #dfdede;
+}
+/* End of cart */
+
+/* start of Modal */
+.close-button {
+  transition: all 0.5s;
+}
+.close-button:hover {
+  transform: scale(1.1);
+  background-color: #fb9898;
+  color: #490707;
+}
+.close-button:active {
+  transform: scale(0.9);
+  background-color: #fb9898 !important;
+  color: #490707 !important;
+}
+.headerFont {
+  font-family: Raleway;
+}
+
+.fa-paypal {
+  color: #283593;
+}
+input[type="text"],
+textarea {
+  background-color: #dfdede !important;
+}
+.modal-footer > button {
+  font-family: Nunito;
+}
+
+/* end of Modal */

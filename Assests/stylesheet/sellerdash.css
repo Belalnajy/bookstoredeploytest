@@ -1,0 +1,135 @@
+/* Sidebar */
+.bg-primary {
+  background-color: #e4cfb6 !important;
+}
+.bg-secondary {
+  background-color: #810b0b !important;
+}
+.text-primary {
+  color: #be9900 !important;
+}
+.text-secondary {
+  color: #223263 !important;
+}
+.text-secondary-emphasis {
+  color: #810b0b !important;
+}
+.btn-primary {
+  background-color: #810b0b;
+  color: #fff;
+}
+.btn-secondary {
+  background-color: #be9900;
+  color: #fff;
+}
+#addProduct {
+  background-color: #810b0b;
+  color: #fff;
+}
+.sidebar {
+  background-color: #343a40;
+  color: #fff;
+  height: 100vh;
+  padding-top: 20px;
+  position: fixed;
+  width: 250px;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  transition: left 0.3s ease;
+}
+.sidebar .nav-link {
+  color: #fff;
+}
+.sidebar .nav-link:hover {
+  background-color: #495057;
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+  margin-left: 250px;
+  background-color: #f8f9fa;
+  transition: margin-left 0.3s ease;
+}
+
+.graph-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.graph-container canvas {
+  width: 100%;
+  height: 200px;
+}
+
+.product-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.product-table td,
+.product-table th {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.search-bar {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    left: -250px;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .toggle-sidebar-btn {
+    display: block;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #15141427;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    top: 15px;
+    left: 0px;
+    z-index: 1100;
+    border-radius: 50%;
+  }
+
+  .product-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sidebar .nav-link {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .graph-container {
+    flex-direction: row;
+  }
+
+  .main-content {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    padding: 40px;
+  }
+}
