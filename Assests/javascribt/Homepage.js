@@ -94,7 +94,7 @@ $(document).ready(function () {
 
   // Redirect to the product page when the banner button is clicked
   $("#banner-btn").on("click", function () {
-    localStorage.setItem("selectedProduct", JSON.stringify(allProductKeys[product_id]));
+    localStorage.setItem("selectedProduct", JSON.stringify(product_id));
     window.location.href = "./Product Page.html";
   });
 
@@ -170,7 +170,10 @@ function getRandomProducts(products) {
     let randomProductId = productKeys[randomIndex]; // Get random product ID
 
     // Ensure the product exists and hasn't been added already
-    if (products[randomProductId] && !randomProducts.includes(randomProductId)) {
+    if (
+      products[randomProductId] &&
+      !randomProducts.includes(randomProductId)
+    ) {
       randomProducts.push(randomProductId); // Add to the array
     }
   }
@@ -211,15 +214,17 @@ function displayProducts(products, category = "All") {
         ? products // Show all products if category is "All"
         : Object.fromEntries(
             // Filter products by category
-            Object.entries(products).filter(([key, product]) => product.category === category),
+            Object.entries(products).filter(
+              ([key, product]) => product.category === category
+            )
           );
 
     // Create and append product cards for each filtered product
     Object.keys(filteredProducts).forEach((key) => {
       const product = filteredProducts[key]; // Get product details
       const BookCard = $(`
-        <div class="col-lg-3 col-md-6 col-sm-12 p-4">
-          <div class="card h-100 w-100" id="product_${key}">
+        <div class="col-lg-3 col-md-6 col-sm-12 p-4 cardcont">
+          <div class="card  id="product_${key}">
             <div class="img-container">
               <img src="${product.img_src}" alt="${product.title}" class="card-img-top imgmain"/>
               <div class="overlay">

@@ -71,9 +71,14 @@ body {
   background-color: #f2f2f2;
 }
 .ran-products .card-img-top {
-  max-width: 100%;
-  max-height: 250px;
-  display: block; /* To avoid inline image spacing issues */
+  width: 85%;
+  height: 250px;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ccc;
+  transform: rotate(0deg);
+  margin: 8%;
 } /* End Random Products */
 /* Start main product */
 #tabs li a {
@@ -99,15 +104,68 @@ body {
   overflow: hidden;
   /* font-size: 20px; */
 }
+/* Default Styles for Desktop */
 .main-product .card {
-  /* shadow */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  /* width: 21rem; */
-  margin: 20px auto;
-  border-radius: 10px;
+  margin: 10px auto; 
+  border-radius: 10px; 
   background-color: #fff;
+  width: 22rem; 
 }
+
+/* Media Query for iPad Pro (1024px - 1366px) */
+@media (max-width: 1366px) {
+  .main-product .card {
+    width: 18rem; /* Slightly smaller width for iPad Pro */
+  }
+}
+
+/* Media Query for iPad Air (768px - 1024px) */
+@media (max-width: 1024px) {
+  .main-product .card {
+    width: 21rem; /* Adjusted width for iPad Air */
+  }
+}
+
+/* Media Query for iPad Mini (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .main-product .card {
+    width: 15rem; /* Adjusted width for iPad Mini */
+  }
+}
+
+/* Media Query for Tablets and Smaller Desktops (768px - 1024px) */
+@media (max-width: 1024px) {
+  .main-product .card {
+    width: 15rem; /* Adjusted width for tablets */
+  }
+}
+
+/* Media Query for Mobile Devices (425px - 768px) */
+@media (max-width: 768px) {
+  .main-product .card {
+    width: 21rem; /* Full width for mobile */
+    margin: 15px; /* Adjusted margin for mobile */
+  }
+}
+
+/* Media Query for Small Mobile Devices (375px - 425px) */
+@media (max-width: 444px) {
+  .main-product .card {
+    width: 100%; /* Full width for small mobile */
+    margin: 10px; /* Adjusted margin for small mobile */
+  }
+}
+
+/* Media Query for iPhone SE (320px - 375px) */
+@media (max-width: 376px) {
+  .main-product .card {
+    width: 100%; /* Full width for iPhone SE */
+    margin: 2px; /* Minimal margin for iPhone SE */
+  }
+}
+
 .main-product .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transform: translateY(-3px);
@@ -120,9 +178,35 @@ body {
   /* display: flex; */
 }
 .img-container img {
-  height: 450px !important;
+  height: 300px !important;
   /* flex-grow: 1; */
-  transition: transform 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ccc;
+  transform: rotate(0deg);
+  margin: 5%;
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .img-container img {
+    margin: 10%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .img-container img {
+    margin: 5%;
+  }
+}
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .img-container img {
+    margin: 0;
+  }
+}
+@media (max-width: 376px) {
+  .img-container img {
+    margin: 3%;
+  }
 }
 .img-container:hover img {
   transform: scale(1);
@@ -154,13 +238,120 @@ body {
 /* end of main card */
 
 /* banner */
-.btn-shop {
-  background-color: #0d2622;
-  color: #fff;
+#banner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #e4cfb6;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.btn-shop:hover {
-  background-color: #4d4c47;
+#banner:hover {
+  background-color: #810b0b69;
+  transform: scale(1.02);
+}
+
+.banner-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#bannerimg {
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  /* Ensures the image covers the area without distortion */
+}
+
+.banner-content {
+  max-width: 60%;
+  padding: 20px;
+}
+
+#banner-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#banner-description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+#banner-btn {
+  background-color: #810b0b;
   color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#banner-btn:hover {
+  background-color: #5c0808;
+}
+
+@media (max-width: 768px) {
+  #banner {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .banner-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-content {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  #banner-title {
+    font-size: 1.5rem;
+  }
+
+  #banner-description {
+    font-size: 1rem;
+  }
+
+  #bannerimg {
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  #banner-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .banner-text {
+    display: none;
+  }
+}
+
+#bannerimg {
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ccc;
+  transform: rotate(3deg);
+  /* margin-right: -15px; */
+  width: 200px;
+  /* Adjust overlap spacing */
+}
+
+#bannerimg:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
 }
 /* end of banner */
